@@ -1,0 +1,5 @@
+1. simple supplement store website with nice css
+2. offers products that can be purchased, look into payments
+3. backend database that contains images, product details
+4. admin side that allows CRUD?
+5. 

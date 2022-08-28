@@ -1,0 +1,29 @@
+.nav {
+    background-color: blue;
+    height: 100px;
+
+}
+
+.maxWidth {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    /* flex-grow: 1; */
+}
+
+.left, .middle, .right {
+    flex-grow: 1;
+}
+
+
+.left {
+    
+}
+
+.middle {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
