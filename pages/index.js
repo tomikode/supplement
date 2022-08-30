@@ -4,21 +4,10 @@ import styles from "../styles/Home.module.css";
 
 // connect mongodb and run some samples
 
+//https://mongoosejs.com/
+//https://www.youtube.com/watch?v=DZBGEVgL2eE
+
 export default function Home() {
-
-
-  // const req = async () => {
-  //   const result = await fetch('/api/hello', {
-  //     method: "GET",
-  //     content: 'application/json'
-  //   })
-
-  //   console.log(result)
-  // }
-
-  // useEffect(() => {
-  //   req()
-  // }, [])
 
 
 	return (
