@@ -1,12 +1,11 @@
 import mongoose from "mongoose";
 
-const main = async () => {
+const connect = async () => {
 	if (mongoose.connections[0].readyState === 0) {
-        console.log('inside')
 		const uri = process.env.MONGODB_URI
-		await mongoose.connect(uri);
+		mongoose.connect(uri);
 		console.log("connected");
 	}
 };
 
-export default main;
+export default connect;
