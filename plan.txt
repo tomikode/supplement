@@ -3,3 +3,19 @@
 3. backend database that contains images, product details
 4. admin side that allows CRUD?
 5. 
+
+
+database
+- products
+- users
+- categories
+- order
+
+pages 
+- home page with products
+- products and categories
+- view one product
+- shopping cart functionality
+- send order through
+- login
+- user profile and orders

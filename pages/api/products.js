@@ -11,25 +11,22 @@ const createProduct = async (req) => {
 	return newProduct;
 };
 
-const updateProduct = async (req) => {
-    
-};
-
 export default async function (req, res) {
 	const method = req.method;
-    console.log(method)
+	console.log(method + " product");
 	connect().catch((err) => console.log(err));
+	let result = { error: "Something went wrong" }
 	switch (method) {
 		case "GET":
-			const products = await getProducts();
-			res.status(200).json(products);
+			result = await getProducts();
+			res.status(200).json(result);
 			break;
 		case "POST":
-			const newProduct = await createProduct(req);
-			res.status(201).json(newProduct);
+			result = await createProduct(req);
+			res.status(201).json(result);
 			break;
-		case "PUT":
-			const result = updateProduct(req);
+		default:
+			res.status(400).json(result)
 			break;
 	}
 }
