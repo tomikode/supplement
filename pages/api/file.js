@@ -17,7 +17,6 @@ const post = async (req, res) => {
 }
 
 const saveFile = async (file, res) => {
-    console.log(file)
     if (fs.existsSync(`./public/${file.name}`))
         return res.status(400).json({ error: "File with this name already exists"})
     const data = fs.readFileSync(file.filepath)

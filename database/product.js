@@ -6,6 +6,7 @@ const productSchema = new mongoose.Schema({
     description: String,
     stock: Number,
     size: String,
+    imageLoc: String,
 })
 
 const product = mongoose.models.Product || mongoose.model('Product', productSchema)
