@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Nav from "../components/Nav";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
@@ -7,6 +8,7 @@ function MyApp({ Component, pageProps }) {
 			<Head>
 				<title>Supplement Store</title>
 			</Head>
+			<Nav />
 			<Component {...pageProps} />
 		</>
 	);

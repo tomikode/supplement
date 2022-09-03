@@ -1,6 +1,3 @@
-import Nav from "../components/Nav";
-import jwt from "jsonwebtoken";
-import { useState } from "react";
 
 // connect mongodb and run some samples
 
@@ -13,7 +10,6 @@ import { useState } from "react";
 export default function Home() {
 	return (
 		<div>
-			<Nav />
 			<div className="h-[2000px] bg-slate-500" />
 		</div>
 	);
