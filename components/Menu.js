@@ -1,35 +1,30 @@
-import { XMarkIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import { XMarkIcon, ChevronDownIcon } from "@heroicons/react/24/solid";
+import { useRouter } from "next/router";
 import React from "react";
 
-const MenuLine = ({ name, nextMenu }) => {
-	const cycleMenu = () => {
-		const first = document.getElementById("first");
-		first.classList.add("-translate-x-[50%]");
-	};
+//either use display none and appear on top or render all in long ass line
+// or use state to set next, prev and current carousel item
+
+//long ass line with all next possible menus, all other have display none
+
+const MenuLine = ({ name }) => {
+
 
 	return (
 		<li
-			onClick={cycleMenu}
 			className="border-t border-black p-3 hover:cursor-pointer flex items-center"
 		>
 			<p className="inline">{name}</p>
-			<ChevronRightIcon className="w-5 h-5 inline float-right" />
+			<ChevronDownIcon className="w-5 h-5 inline float-right ml-auto" />
 		</li>
-	);
-};
-
-const ProductMenu = () => {
-	return (
-		<ul>
-			<li>Whey</li>
-			<li>Amino</li>
-		</ul>
 	);
 };
 
 const Menu = () => {
 	const closeMenu = () => {
-		document.getElementById("menu").classList.remove("translate-x-0");
+		const menu = document.getElementById("menu");
+		menu.classList.remove("translate-x-0");
+		menu.classList.add("-translate-x-full");
 		const darken = document.getElementById("darken");
 		darken.classList.remove("h-screen");
 		darken.classList.remove("opacity-50");
@@ -51,12 +46,12 @@ const Menu = () => {
 					onClick={closeMenu}
 					className="w-10 h-10 hover:text-gold hover:cursor-pointer m-2"
 				/>
-				<div id="first" className="flex w-[200%]">
-					<div className="w-[50%]">
+				<div id="cycle">
+					<div className="">
 						<ul className="text-lg select-none">
-							<MenuLine name="Home" />
-							<MenuLine name="Shop by Product" />
-							<MenuLine name="Shop by Goal" />
+							<MenuLine name="Home" closeMenu={closeMenu} />
+							<MenuLine name="Shop by Product" closeMenu={closeMenu} />
+							<MenuLine name="Shop by Goal" closeMenu={closeMenu} />
 						</ul>
 					</div>
 				</div>

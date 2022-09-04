@@ -6,7 +6,9 @@ import Menu from "./Menu";
 const Nav = () => {
 
 	const openMenu = () => {
-		document.getElementById("menu").classList.add("translate-x-0")
+		const menu = document.getElementById("menu")
+		menu.classList.remove("-translate-x-full");
+		menu.classList.add("translate-x-0")
 		const darken = document.getElementById("darken")
 		darken.classList.add("h-screen")
 		darken.classList.add("opacity-50")
